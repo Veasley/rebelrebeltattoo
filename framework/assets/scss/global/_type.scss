@@ -1,0 +1,101 @@
+/**
+ * NAME : TYPOGRAPGY
+ *
+ * This page contains all of our typography settings
+ * and builds!
+ *
+ */
+
+/*-------------------------------------------
+	 Type  | Build
+*------------------------------------------*/
+
+
+///////////////      <h1>          ///////////////
+
+
+// H1 Settings
+// =================
+
+
+
+// H1 Build
+// =================
+h1{
+
+	//White Variant Example
+	&.-white{
+		color: white;
+	}
+
+}
+
+
+// h1 Responsive BUILD Example
+// ===========================
+h1{
+
+	//Laptop sizes ( 1400px )
+		@include respond-max( $laptop ){
+
+
+
+		}
+
+		//ipadSizes ( 1200px )
+		@include respond-max( $ipad ){
+
+
+
+		}
+
+		//ipadSizes ( 980px )
+		@include respond-max( $tablet ){
+
+
+
+		}
+
+		//Custom Size ( 880px )
+		@include respond-custom( max-width,  880px ){
+
+
+
+		}
+
+		//ipadSizes ( 980px )
+		@include respond-max( $phone ){
+
+
+
+		}
+
+}
+
+
+///////////////     .x-text          ///////////////
+
+// When a type element is inside an X-Text Element
+// we can style it using variants in any way we choose!
+
+.x-text{
+
+	//Gray Variant
+	&.-gray{
+
+		> h1, h2, h3, h4,h5,h6, p{
+			color:gray;
+		}
+
+	}
+
+	//White Variant
+	&.-white{
+
+		> h1, h2, h3, h4,h5,h6, p{
+			color: white;
+		}
+
+	}
+
+}

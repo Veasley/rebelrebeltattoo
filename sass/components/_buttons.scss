@@ -1,0 +1,35 @@
+// base styles for all buttons
+.x-btn{
+
+	&:hover,
+	&:focus{
+
+	}
+
+	&.x-btn-large{
+
+	}
+
+	&.x-btn-medium{
+
+	}
+
+
+}
+
+/**
+ * Build Button Variants
+ *
+ */
+
+//secondary button style
+
+.x-btn.-secondary{
+
+
+	&:focus,
+	&:hover{
+
+	}
+
+}

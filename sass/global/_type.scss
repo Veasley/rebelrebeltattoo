@@ -1,0 +1,171 @@
+/**
+ * NAME : TYPOGRAPGY
+ *
+ * This page contains all of our typography settings
+ * and builds!
+ *
+ */
+
+/*-------------------------------------------
+	 Type  | Build
+*------------------------------------------*/
+
+
+///////////////      <h1>          ///////////////
+
+
+// H1 Settings
+// =================
+$h1_font_size: 350%;
+
+
+
+// H1 Build
+// =================
+h1{
+
+	//Scale down the h1 tags from the default of 400%
+	// Must Use Important Tags Unfortunately
+
+	//White Variant
+	&.-white{
+		color: white;
+	}
+
+}
+
+
+// h1 Responsive BUILD
+// ===========================
+h1{
+
+	//Laptop sizes ( 1400px )
+		@include respond-max( $laptop ){
+
+
+
+		}
+
+		//ipadSizes ( 1200px )
+		@include respond-max( $ipad ){
+
+
+
+		}
+
+		//ipadSizes ( 980px )
+		@include respond-max( $tablet ){
+
+
+
+		}
+
+		//Custom Size ( 880px )
+		@include respond-custom( max-width,  880px ){
+
+
+
+		}
+
+		//ipadSizes ( 980px )
+		@include respond-max( $phone ){
+
+
+
+		}
+
+}
+
+
+
+/////////////////		<h4>      /////////////////////
+
+// h4  SETTINGS
+// ===========================
+
+
+
+// h4 Responsive BUILD
+// ===========================
+h4{
+
+	//1400px
+	@include respond-max( $laptop ){
+
+
+	}
+
+	//1200px
+	@include respond-max( $ipad ){
+
+
+	}
+
+}
+
+
+/////////////////		<h5> 	/////////////////////
+
+
+// h5 SETTINGS
+// ===========================
+
+
+
+
+// h5
+// ===========================
+h5{
+
+
+
+
+}
+
+
+// h5 RESPONSIVE
+// ===========================
+h5{
+
+	//1400px
+	@include respond-max( $laptop ){
+
+
+	}
+
+	//1200px
+	@include respond-max( $ipad ){
+
+
+	}
+
+}
+
+
+///////////////     .x-text          ///////////////
+
+// When an element is inside an X-Text Element
+// we can style it using variants in any way we choose!
+
+.x-text{
+
+	//Gray Variant
+	&.-gray{
+
+		> h1, h2, h3, h4,h5,h6, p{
+			color:$gray;
+		}
+
+	}
+
+	//White Variant
+	&.-white{
+
+		> h1, h2, h3, h4,h5,h6, p{
+			color: white;
+		}
+
+	}
+
+}
+

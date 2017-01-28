@@ -1,0 +1,34 @@
+// Control Max Widths with these handy helpers
+// =====================================
+.x-text{
+
+	&._max-large{
+		max-width: em( 1300 );
+	}
+
+	&._max-medium{
+		max-width: em( 1150 );
+	}
+
+	&._max-small{
+		max-width: em( 550 );
+	}
+
+
+	&._center{
+		margin-left: auto;
+		margin-right:auto;
+	}
+
+	&._left{
+		margin-left: 0;
+		margin-right:auto;
+	}
+
+	&._right{
+		margin-left: auto;
+		margin-right:0;
+	}
+
+
+}

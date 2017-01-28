@@ -1,0 +1,37 @@
+/**
+ * NAME : BUTTONS
+ *
+ * Put all button styles, variants, and overrides in this handly little file!
+ *
+ */
+
+ // Main X Theme GLobal Button Styles
+ // ============================
+.x-btn.x-btn-global{
+
+	&:hover,
+	&:focus{
+
+	}
+
+}
+
+
+// Custom Button Variants
+// @note - you can change the name secondary to anything you want!
+// @example: -blue
+// ==============
+
+//
+// Secondary Button Variant
+//
+
+.x-btn.-secondary{
+
+
+	&:focus,
+	&:hover{
+
+	}
+
+}

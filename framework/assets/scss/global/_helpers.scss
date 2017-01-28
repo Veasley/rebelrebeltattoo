@@ -1,0 +1,39 @@
+// This file is for HELPER classes that can be used site wide to modify elements.
+// Example: a bit of code to control max width, or to build a :before element as an overlay etc etc
+// Please prepend all helpers with an underscore "_"
+// ============================================================================
+
+
+// Control Max Widths with these handy helpers
+// =====================================
+.x-text{
+
+	&._max-large{
+		max-width: em( 1300 );
+	}
+
+	&._max-medium{
+		max-width: em( 1150 );
+	}
+
+	&._max-small{
+		max-width: em( 550 );
+	}
+
+
+	&._center{
+		margin-left: auto;
+		margin-right:auto;
+	}
+
+	&._left{
+		margin-left: 0;
+		margin-right:auto;
+	}
+
+	&._right{
+		margin-left: auto;
+		margin-right:0;
+	}
+
+}
