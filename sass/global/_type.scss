@@ -22,124 +22,96 @@ $h1_font_size: 350%;
 
 // H1 Build
 // =================
-h1{
+h1 {
 
 	//Scale down the h1 tags from the default of 400%
 	// Must Use Important Tags Unfortunately
+	
+	@include respond-custom(max-width, 809px) {
+		font-size: 330% !important;
+	}
+	
+	//600px
+    @include respond-max($l-phone) {
+		font-size: 250% !important;
+	}
+
 
 	//White Variant
-	&.-white{
+	&.-white {
 		color: white;
+		
+		> span > span {
+			color: white;
+		}
 	}
-
 }
 
 
-// h1 Responsive BUILD
+// H2 BUILD
 // ===========================
-h1{
-
-	//Laptop sizes ( 1400px )
-		@include respond-max( $laptop ){
-
-
-
+h2 {
+	font-size: 270% !important;
+	
+	//1440px
+    @include respond-max($l-desktop) {
+		font-size: 230% !important;
+	}
+	
+	//White Variant
+	&.-white {
+		
+		> span > span {
+			color: white;
 		}
-
-		//ipadSizes ( 1200px )
-		@include respond-max( $ipad ){
-
-
-
-		}
-
-		//ipadSizes ( 980px )
-		@include respond-max( $tablet ){
-
-
-
-		}
-
-		//Custom Size ( 880px )
-		@include respond-custom( max-width,  880px ){
-
-
-
-		}
-
-		//ipadSizes ( 980px )
-		@include respond-max( $phone ){
-
-
-
-		}
-
+	}
 }
 
 
 
-/////////////////		<h4>      /////////////////////
-
-// h4  SETTINGS
+// H4 BUILD
 // ===========================
-
-
-
-// h4 Responsive BUILD
-// ===========================
-h4{
-
-	//1400px
-	@include respond-max( $laptop ){
-
-
-	}
-
-	//1200px
-	@include respond-max( $ipad ){
-
-
-	}
-
+h4 {
+	font-size: 180% !important;
 }
 
 
-/////////////////		<h5> 	/////////////////////
 
-
-// h5 SETTINGS
+// H6 BUILD
 // ===========================
-
-
-
-
-// h5
-// ===========================
-h5{
-
-
-
-
+h6 {
+	font-size: 80% !important;
+	letter-spacing: 0 !important;
 }
 
 
-// h5 RESPONSIVE
-// ===========================
-h5{
-
-	//1400px
-	@include respond-max( $laptop ){
 
 
+///////////////     .custom-headline          ///////////////
+
+.h-custom-headline { 
+	margin-top: 0 !important;
+	
+	> span > span {
+		color: $black;
+		font-weight: lighter;
+		font-size: 60% !important;
+		
+		//1280px
+	    @include respond-max($l-laptop) {
+			display: block;
+		}
 	}
-
-	//1200px
-	@include respond-max( $ipad ){
-
-
+	
+	
+	&.-secondary {
+		
+		> span {
+			color: white !important;
+		}
 	}
-
 }
+
 
 
 ///////////////     .x-text          ///////////////
@@ -147,21 +119,37 @@ h5{
 // When an element is inside an X-Text Element
 // we can style it using variants in any way we choose!
 
-.x-text{
+.x-text { 
+	line-height: 1.3;
+	
+	
+	&.-subtitle {
+		font-style: oblique;
+		font-size: rem(30);
+		font-weight: lighter;
+		letter-spacing: .03em;
+		
+		@include respond-custom(max-width, 380px) {
+			font-size: 16px !important;
+		}
+	}
+	
 
 	//Gray Variant
-	&.-gray{
+	//=======================
+	&.-grey{
 
 		> h1, h2, h3, h4,h5,h6, p{
-			color:$gray;
+			color: $grey;
 		}
 
 	}
 
 	//White Variant
+	//=====================
 	&.-white{
 
-		> h1, h2, h3, h4,h5,h6, p{
+		> h1, h2, h3, h4, h5, h6, p{
 			color: white;
 		}
 

@@ -1,35 +1,60 @@
 // base styles for all buttons
-.x-btn{
+//================================
+
+
+//Black Button
+//==================
+.x-btn {
+	border: 8px double $black !important;
+	padding: em(20) em(35)!important;
+	font-size: 16px !important;
+	letter-spacing: 1px;
+	font-weight: 600;
+	
+	//600px
+    @include respond-max($l-phone) {
+        width: 100%;
+        font-size: 14px !important;
+        padding: em(20) em(15) !important;
+    }
 
 	&:hover,
-	&:focus{
-
+	&:focus {
+		border: 8px double $black;
+		background-color: rgba($black, .8) !important;
+		color: white;
 	}
-
-	&.x-btn-large{
-
-	}
-
-	&.x-btn-medium{
-
-	}
-
-
+	
 }
 
-/**
- * Build Button Variants
- *
- */
-
-//secondary button style
-
-.x-btn.-secondary{
+//White Button
+//====================
+.x-btn.-white-btn{
+	border: 8px double white !important;
+	color: white;
 
 
 	&:focus,
-	&:hover{
+	&:hover {
+		border: 8px double white;
+		background-color: rgba(white, .8) !important;
+		color: $black;
+	}
 
+}
+
+
+//Green Button
+//====================
+.x-btn.-lime-btn{
+	border: 8px double $lime !important;
+	color: white;
+
+	&:focus,
+	&:hover {
+		border: 8px double $lime;
+		background-color: rgba($lime, .8) !important;
+		color: white;
 	}
 
 }

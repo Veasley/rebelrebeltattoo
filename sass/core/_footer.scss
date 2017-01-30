@@ -1,0 +1,96 @@
+// FOOTER
+// =====================================
+
+
+//Location Map
+//========================
+#location-map {
+	
+	//Location Info
+	//================
+	.location {
+		max-width: em( 720 );
+		
+		@include respond-custom(max-width, 380px) {
+			padding: 5px !important;
+		}
+		
+		.x-text {
+			padding: em(45) em(15);
+			margin: em(1);
+			background-color: rgba(white, .8);
+			
+			> p {
+				margin-bottom: 0 !important;
+				
+				> a {
+					color: $black;
+					
+					@include respond-custom(max-width, 380px) {
+						font-size: 14px !important;
+					}
+					
+					&:hover {
+						color: $grey;
+					}
+				}
+			}
+		}
+
+	}	
+}
+
+
+//REBEL WIDGET
+//========================
+.x-colophon.top {
+	background: url(/wp-content/uploads/2017/01/footer-bg.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0 !important;
+	position: relative;
+	text-align: center;
+	
+	img {
+		opacity: .3;
+		
+		//600px
+	    @include respond-max($l-phone) {
+			width: 180px;
+		}
+	}
+}
+
+
+//FOOTER
+//========================
+.x-colophon.bottom {
+	padding: 0 !important;
+	
+	
+	.x-colophon-content {
+		text-transform: uppercase;
+	}
+	
+	.follow-us {
+		background-color: $dark-grey;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 1px !important;
+		
+		.x-social-global {
+			display: inline;
+			
+			> a {
+				background-color: transparent !important;
+				
+				&:hover,
+				&:focus {
+					color: $lime;
+				}
+			}
+		}
+	}
+}

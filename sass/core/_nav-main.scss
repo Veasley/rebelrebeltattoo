@@ -1,0 +1,67 @@
+//MAIN NAVIGATION
+//===============================
+
+.x-navbar {
+	position: fixed;
+	width: 100%;
+	background-color: transparent !important;
+	
+	//1024px
+    @include respond-max($hor-tablet) {
+	}
+		
+	.x-nav {
+		
+		> li > a > span {
+			box-shadow: none !important;
+		}
+	}
+	
+	//Logo
+	.x-brand.img {
+		
+		//768px
+	    @include respond-max($ver-tablet) {
+			width: 160px;
+			margin-top: 20px !important;
+		}
+	}
+}
+
+
+
+//On Scroll, Navbar 
+//=======================
+
+.x-navbar-fixed-top {
+	transition: all 0.5s ease-in-out;
+	height: 60px !important;
+	background-color: rgba($black, .9) !important;	
+	
+	
+	/*.x-brand.img {
+		margin-top: 18px !important;
+		
+		img {
+			display: block;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			background: url(/wp-content/uploads/2017/01/white-bolt.png) no-repeat;
+			background-size: contain;
+			width: 60px;
+			height: 60px; 
+			padding-left: 130px; 
+		}
+	}*/
+	
+	.x-brand.img {
+		margin-top: 7px !important;
+		width: 100px;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	
+	.x-nav > li > a {
+		padding-top: 24px !important;
+	}
+}

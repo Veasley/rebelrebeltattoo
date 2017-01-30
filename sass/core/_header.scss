@@ -1,0 +1,19 @@
+// PAGE HEADERS
+//===============================
+
+#home-hero {
+	
+	//768px
+    @include respond-max($ver-tablet) {
+        padding-top: 170px !important;
+    }
+    
+    //600px
+    @include respond-max($l-phone) {
+        padding-top: 140px !important;
+    }
+    
+    @include respond-custom(max-width, 380px) {
+		padding-top: 120px !important;
+	}
+}

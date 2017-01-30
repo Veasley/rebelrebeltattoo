@@ -1,0 +1,25 @@
+// FEATURE BOX ELEMENT
+// =====================================
+
+.x-feature-box {
+	
+	//Icon container
+	//===============================
+	> .x-feature-box-graphic {
+		margin-bottom: em(30);
+		border: 5px solid $black;
+		padding: 15px;
+	}
+	
+	
+	//Text content
+	//=============================
+	.x-feature-box-content {
+		
+		> .x-feature-box-text {
+			line-height: 1.2;
+			font-size: 16px;
+			padding: 0 em(30);
+		}
+	}
+}

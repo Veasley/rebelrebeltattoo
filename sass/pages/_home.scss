@@ -1,0 +1,131 @@
+// HOMEPAGE
+// =====================================
+
+//Welcome section
+//========================
+#welcome {
+	
+	//#REBELTATTOO
+	//======================
+	.welcome-img {
+		background: url(/wp-content/uploads/2017/01/welcome-img.jpg) no-repeat center center; 
+	}
+}
+
+
+//Instagram slider section
+//========================
+#rebel-instagram {
+	position: relative;
+	
+	.h-custom-headline > span {
+		position: absolute;
+		width: 100%;
+		display: block;
+		top: 60px;
+		
+		> a {
+			color: white;
+			
+			&:hover,
+			&:focus {
+				color: $lime;
+			}
+		}
+	}
+	
+	//Quotes Start
+	
+}
+
+
+//Quote Motto
+//========================
+#quote-motto {
+	
+	.h-custom-headline > span {
+		
+		&::before {
+			content: url("/wp-content/uploads/2017/01/quote-begin.png");
+	        display: inline-block;
+	        padding-right: em(8);
+		}
+		
+		&::after {
+			content: url("/wp-content/uploads/2017/01/quote-end.png");
+	        display: inline-block;
+	        padding-left: em(8);
+		}
+
+	}
+	
+}		
+
+
+
+//Quick Prices section
+//========================
+#quick-prices {
+	
+	//Skill bar title
+	//=====================
+	.h-skill-bar {
+		font-family: $font-main;
+		color: $black;
+	}
+	
+	
+	//Ready for a Tattoo
+	//========================
+	.prices-img {
+		background: url(/wp-content/uploads/2017/01/quick-price-img.jpg) no-repeat center center; 
+		
+		.x-btn {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			opacity: .8;
+			
+			//1400px
+		    @include respond-max($m-desktop) {
+				top: 53%;
+			}
+			
+			@include respond-custom(max-width, 970px) {
+				top: 50%;
+			}
+			
+			//600px
+		    @include respond-max($l-phone) {
+				width: 80%;
+			}
+		}
+		
+		._neon-border {
+			height: 770px;
+			padding: em(70) 0;
+			
+			//1400px
+		    @include respond-max($m-desktop) {
+				padding: em(100) 0;
+			}
+			
+			@include respond-custom(max-width, 970px) {
+				height: 807px;
+			}
+			
+			//880px
+		    @include respond-max($m-tablet) {
+				padding: em(140) 0;
+			}
+			
+			//767px
+		    @include respond-max($xl-phone) {
+			    height: 300px;
+				padding: em(30) 0;
+			}
+		}
+	}
+}

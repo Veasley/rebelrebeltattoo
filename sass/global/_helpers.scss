@@ -2,33 +2,140 @@
 // =====================================
 .x-text{
 
-	&._max-large{
+	&._max-1300 {
 		max-width: em( 1300 );
 	}
 
-	&._max-medium{
+	&._max-1150 {
 		max-width: em( 1150 );
 	}
 
-	&._max-small{
-		max-width: em( 550 );
+	&._max-520 {
+		max-width: em( 520 );
+	}
+	
+	&._max-480 {
+		max-width: em( 480 );
 	}
 
 
-	&._center{
+	&._center {
 		margin-left: auto;
 		margin-right:auto;
 	}
 
-	&._left{
+	&._left {
 		margin-left: 0;
 		margin-right:auto;
 	}
 
-	&._right{
+	&._right {
 		margin-left: auto;
 		margin-right:0;
 	}
+}
 
 
+// PADDING
+//========================
+._mobile-padding {
+	
+	//600px
+    @include respond-max($l-phone) {
+        padding-top: em(45) !important;
+		padding-bottom: em(45) !important;
+    }
+}
+
+
+
+// GRADIENT OVERLAY
+//========================
+._before {
+    position: relative;
+    z-index: 1;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+._before._overlay-black {
+    
+    &::before {
+        background-color: rgba($black, .7);
+        z-index: -1;
+    }
+}
+
+
+
+//LEFT COLUMN CONTENT
+//=======================
+._left-content-col {
+	
+	//1440px
+    @include respond-max($l-desktop) {
+		padding-left: 5% !important;
+	}
+}
+
+
+
+// RIGHT COLUMN BACKGROUND IMAGE
+//========================
+._bg-img-col {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	//position: relative;
+	
+	//980px
+    @include respond-max($l-tablet) {
+		padding: 30px !important;
+	}
+	
+	@include respond-custom(max-width, 360px) {
+		padding: 15px !important;
+	}
+}
+
+
+
+// NEON BORDER
+//========================
+._neon-border {
+	padding: em(60) 0;
+	margin-bottom: 0 !important;
+	border: 5px solid $lime;
+	opacity: .8;
+	
+	//1400px
+    @include respond-max($m-desktop) {
+		font-size: 300% !important;
+		padding: em(80) 0;
+	}
+	
+	@include respond-custom(max-width, 972px) {
+		font-size: 290% !important;
+		padding: em(88) 0;
+	}
+	
+	//880px
+    @include respond-max($m-tablet) {
+		font-size: 220% !important;
+		padding: em(120) 0;
+	}
+	
+	//767px
+    @include respond-max($xl-phone) {
+		padding: em(30) 0;
+	}
 }

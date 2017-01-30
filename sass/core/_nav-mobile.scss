@@ -1,0 +1,41 @@
+//MOBILE NAVIGATION
+//===============================
+
+.x-btn-navbar {
+	background-color: transparent !important;
+	box-shadow: none !important;
+	
+	//768px
+    @include respond-max($ver-tablet) {
+		margin-top: 5px !important;
+	}
+	
+	&:hover,
+	&:focus {
+		color: $lime !important;
+	}
+	
+}
+
+
+
+.x-navbar-fixed-top {
+	
+	.x-btn-navbar {
+		margin-top: 2px;
+	}
+	
+	&.x-navbar .mobile .x-nav li > a {
+		padding-top: em(15) !important;
+	}
+}
+
+
+
+
+//Dropdown Menu
+//========================
+.x-nav-wrap.mobile{
+	background-color: rgba($black, .95);
+	padding: 0 em(30);
+}
