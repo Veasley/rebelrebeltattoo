@@ -138,3 +138,25 @@
 		padding: em(30) 0;
 	}
 }
+
+
+//LOAD MORE - GALLERY LINK
+//===============================
+.tg-nav-color {
+	color: $black;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+
+
+//PLUS ICON - GALLERY HOVER
+//================================
+.tg-item-overlay {
+	background-color: rgba($black, .8) !important;
+}
+
+
+.tg-icon-add {
+	color: $lime !important;
+}
