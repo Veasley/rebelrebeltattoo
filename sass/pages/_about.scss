@@ -1,0 +1,68 @@
+// ABOUT PAGE
+// =====================================
+
+
+//MEET THE ARTIST
+//================================
+#rebel-artist {
+	
+}
+
+
+//NEW BEGINNINGS
+//================================
+#new-begins {
+	
+	.begin-img {
+		background: url(/wp-content/uploads/2017/02/new-beginning.jpg) no-repeat center center; 
+		
+		.x-btn {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			opacity: .8;
+			
+			//1400px
+		    @include respond-max($m-desktop) {
+				top: 53%;
+			}
+			
+			@include respond-custom(max-width, 970px) {
+				top: 50%;
+			}
+			
+			//600px
+		    @include respond-max($l-phone) {
+				width: 80%;
+			}
+		}
+		
+		._neon-border {
+			height: 770px;
+			padding: em(70) 0;
+			
+			//1400px
+		    @include respond-max($m-desktop) {
+				padding: em(100) 0;
+			}
+			
+			@include respond-custom(max-width, 970px) {
+				height: 807px;
+			}
+			
+			//880px
+		    @include respond-max($m-tablet) {
+				padding: em(140) 0;
+			}
+			
+			//767px
+		    @include respond-max($xl-phone) {
+			    height: 300px;
+				padding: em(30) 0;
+			}
+		}
+	}
+	
+}

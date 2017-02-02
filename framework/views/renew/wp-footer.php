@@ -14,17 +14,11 @@
 			<div class="x-column x-sm cs-ta-center location x-1-1" style="padding: 15px;border-style: solid;border-width: 5px;border-color: hsl(0, 0%, 100%);">
 				<div class="x-text">
 					
-					<!-- <?php $address_info = get_field('address_info'); ?>
+					<?php $address_info = get_field('address_info', 'options'); ?>
 					<?php if( $address_info ): ?>
-						<p><?php echo $address_info; ?></p>
-					<?php endif; ?> -->
+						<?php echo $address_info; ?>
+					<?php endif; ?>
 										
-					<p><strong>REBEL REBEL TATTOO</strong><br>
-						452 E. 5th Street Dayton, Ohio<br>
-						<strong>Phone:</strong> (513) 320-3831<br>
-						<strong>Email:</strong> <a href="mailto:appointments@rebelrebeltattoo.com">appointments@rebelrebeltattoo.com</a><br>
-						<strong>Hours:</strong> Monday- Saturday 11AM – 7PM, Sunday Closed
-					</p> 
 				</div>
 			</div>
 		</div>

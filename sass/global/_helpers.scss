@@ -42,8 +42,8 @@
 	
 	//600px
     @include respond-max($l-phone) {
-        padding-top: em(45) !important;
-		padding-bottom: em(45) !important;
+        padding-top: em(30) !important;
+		padding-bottom: em(30) !important;
     }
 }
 
@@ -94,8 +94,7 @@
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
-	//position: relative;
+	background-size: cover !important;
 	
 	//980px
     @include respond-max($l-tablet) {
