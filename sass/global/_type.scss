@@ -73,6 +73,17 @@ h2 {
 // ===========================
 h4 {
 	font-size: 180% !important;
+	
+	//1024px
+    @include respond-max($hor-tablet) {
+		font-size: 150% !important;
+	}
+	
+	
+	//768px
+    @include respond-max($ver-tablet) {
+		font-size: 130% !important;
+	}
 }
 
 

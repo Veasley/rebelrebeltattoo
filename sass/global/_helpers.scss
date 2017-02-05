@@ -38,6 +38,15 @@
 
 // PADDING
 //========================
+._mobile-padding-top {
+	
+	//600px
+    @include respond-max($l-phone) {
+        padding-top: em(30) !important;
+    }
+}
+
+
 ._mobile-padding {
 	
 	//600px
@@ -113,7 +122,7 @@
 ._neon-border {
 	padding: em(60) 0;
 	margin-bottom: 0 !important;
-	border: 5px solid $lime;
+	border: 5px solid $green;
 	opacity: .8;
 	
 	//1400px

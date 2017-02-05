@@ -1,0 +1,107 @@
+// CONTACT PAGE
+// =====================================
+
+//Breaks input lists into a column - Left Side
+.adjustment-placement1 {
+	width: 48%;
+	display: inline-block;
+	float: left;
+	margin-right: 2% !important;
+	
+	@include respond-custom(max-width, 641px) {
+		width: 100%;
+		display: block;
+		float: none;
+		margin-right: 0 !important;
+	}
+}
+
+
+//Breaks input lists into a column - Right Side
+.adjustment-placement2 {
+	width: 48%;
+	display: inline-block;
+	
+	@include respond-custom(max-width, 641px) {
+		width: 100%;
+		display: block;
+	}
+}
+
+
+
+//Gravity Forms
+//========================================
+.gform_body {
+	
+	label {
+		text-transform: uppercase;
+	}
+	
+	
+	//Dropdown description
+	.gfield_description {
+		font-size: 15px !important;
+		line-height: 1.2 !important;
+	}
+	
+	
+	//Email and phone fields
+	#input_1_2,
+	#input_1_4 {
+		width: 104% !important;
+		
+		@include respond-custom(max-width, 641px) {
+			width: 100% !important;
+		}
+	}
+	
+	
+	input,
+	textarea,
+	select {
+		background-color: #ebebeb !important;
+		padding: 0 0.65em !important;
+	}
+	
+	select,
+	textarea {
+		border-radius: 0 !important;
+		font-size: 16px !important;
+	}
+	
+	select {
+		border: 0 ;
+		outline: 2px solid #ddd;
+		background-color: #ebebeb !important;
+		
+		&:focus {
+			outline: 2px solid rgba(0,0,0,0.25);
+		}
+	}
+}
+
+//Submit button
+input[type="submit"] {
+	@extend .x-btn;
+	width: 300px !important;
+	
+	//600px
+    @include respond-max($l-phone) {
+        width: 100% !important;
+    }
+}
+
+
+
+
+//SOCIAL SHARE/CONNECT
+//========================================
+.x-creative-cta {
+	padding: 40px !important;
+	
+	.text {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}

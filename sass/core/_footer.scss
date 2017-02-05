@@ -94,3 +94,20 @@
 		}
 	}
 }
+
+
+
+//SCROLL TO TOP
+//=========================
+.x-scroll-top {
+	border: 3px solid $lime;
+	opacity: 1;
+	
+	&.in {
+		opacity: 1;
+	}
+	
+	> .x-icon-angle-up {
+		color: $lime;
+	}
+}

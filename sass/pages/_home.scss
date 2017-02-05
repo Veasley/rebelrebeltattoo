@@ -63,21 +63,32 @@
 
 
 
-//Quick Prices section
+//Quick FAQs section
 //========================
-#quick-prices {
+#quick-faqs {
 	
-	//Skill bar title
+	//FAQ list
 	//=====================
-	.h-skill-bar {
-		font-family: $font-main;
-		color: $black;
+	.faq-list {
+		
+		strong {
+			font-family: $font-main;
+			color: $black;
+			display: block;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+			font-size: 14px;
+		}
+		
+		br {
+			display: none;
+		}
 	}
 	
 	
 	//Ready for a Tattoo
 	//========================
-	.prices-img {
+	.faqs-img {
 		background: url(/wp-content/uploads/2017/01/quick-price-img.jpg) no-repeat center center; 
 		
 		.x-btn {

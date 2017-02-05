@@ -47,13 +47,13 @@
 //Green Button
 //====================
 .x-btn.-lime-btn{
-	border: 8px double $lime !important;
+	border: 8px double $green !important;
 	color: white;
 
 	&:focus,
 	&:hover {
-		border: 8px double $lime;
-		background-color: rgba($lime, .8) !important;
+		border: 8px double $green;
+		background-color: rgba($green, .8) !important;
 		color: white;
 	}
 

@@ -1,28 +1,16 @@
 // TEAM MEMBER ELEMENT
 // =====================================
-
-.csl-teammember  {
-	position: relative;    
-    overflow: hidden;
-    
-    //767px
-    @include respond-max($xl-phone) {
-	    @include center;
-		width: 60%;
-	}
-	
-	
-	//480px
-    @include respond-max($m-phone) {
-		width: 100%;
-	}
-    
+.artist-col  {
+	position: relative;  
+    overflow: hidden !important;
+	    
     &:hover {
 	    
-	    .teammember-image-wrap {
+	    .x-img {
+		    opacity: 1;
 		    
 		    &::before {
-			    background-color: rgba($lime, .6);
+			    background-color: rgba($black, .8);
 		    }
 		    
 		    img {
@@ -36,7 +24,10 @@
     
     //Team member Image
 	//======================
-    .teammember-image-wrap {
+    .x-img {
+	    width: 100%;
+	    margin-bottom: 0 !important;
+	    opacity: 1 !important;
 	    		    
 	    &::before {
 	        content: '';
@@ -46,7 +37,7 @@
 	        height: 100%;
 	        top: 0;
 	        left: 0;
-	        background-color: rgba($black, .5);
+	        background-color: rgba($black, .6);
 	        z-index: 2;
 	    }	 
 	    
@@ -54,77 +45,63 @@
 		  -moz-transition: all 0.3s;
 		  -webkit-transition: all 0.3s;
 		  transition: all 0.3s;
+		  
+		  //767px
+		    @include respond-max($xl-phone) {
+				width: 100%;
+			}
+
 	    }   
     }
 
 	
 	//Team member Info
 	//======================
-	.teammember-info {
+	.x-text {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
 		background-color: transparent !important;
 		z-index: 5;
 		padding-left: 3vw;
-		padding-bottom: 2vw;
+		padding-bottom: 1vw;
 		
-		.teammember-name {
-			font-family: $font-title;
-			font-size: 32px;
-			line-height: 1.2;
-			letter-spacing: 1px;
+		h5 {
+			margin: 0 !important;
 			
-			//1280px
-		    @include respond-max($l-laptop) {
-				font-size: 24px;
+			> a {
+				font-size: 32px;
+				line-height: 1.2;
+				letter-spacing: 1px;
+				color: white;
+				display: block;
+				
+				//1280px
+			    @include respond-max($l-laptop) {
+					font-size: 24px;
+				}
+				
+				//880px
+			    @include respond-max($m-tablet) {
+					font-size: 22px;
+				}
 			}
+			
 		}
 		
 		
-		.teammember-title {
+		p > em {
 			font-family: $font-main;
 			font-size: 20px;
 			line-height: 1.2;
 			font-style: oblique;
+			color: $lime;
 			
 			//1280px
 		    @include respond-max($l-laptop) {
 				font-size: 18px;
 			}
 		}
-	}
-	
-	
-	//View More Button
-	//========================
-	.view-profile {
-		@extend .x-btn;
-		@extend .-white-btn;
-		background-color: transparent !important;
-		z-index: 5;
-		top: 40%;
-		opacity: 1;
-		text-transform: uppercase;
-		
-		//1440px
-	    @include respond-max($l-desktop) {
-			top: 30%;
-		}
-		
-		//1280px
-	    @include respond-max($l-laptop) {
-			width: 60%;
-		}
-		
-		
-		//1024px
-	    @include respond-max($hor-tablet) {
-			//top: 25%;
-			width: 80%;
-			padding: em(5) em(20)!important;
-		}
-
 	}
 }
 
@@ -133,90 +110,76 @@
 
 //LAST TEAM MEMBER
 //===================================
-.last-member {
+.artist-col.last-member {
 	
-	.csl-teammember  {
+	.x-text a,
+	.x-text a h5 {
+		pointer-events: none !important;
+	}
+
+	
+	.x-img  {
 		pointer-events: none !important;
 		
-		//Team member Image
-		//======================
-	    .teammember-image-wrap {
-		    		    
-		    &::before {
-		        background-color: rgba($black, .9);
-		    }
-		}
+		&::before {
+	        background-color: rgba($black, .95);
+	    }
 	}
 }
 
 
 
-//TEAM MEMBER OVERLAY
-//===================================
 
-.teammember-bio-overlay {
-	background-color: rgba($black, .95);
+//SINGLE ARTIST PAGE
+//================================
+.artist-page {
 	
-	
-	.teammember-bio-container {
-		width: 75%;
+	//Button
+	//==============
+	.x-btn {
 		
-		//880px
-	    @include respond-max($m-tablet) {
-			width: 90%;
+		//767px
+	    @include respond-max($xl-phone) {
+			margin-bottom: em(30);
 		}
+	}
+	
+	
+	//Socail Icons
+	//==============
+	.x-text > p {
 		
-		
-		//Close Button
-		//===================
-		.t-close {
-			background-color: transparent !important;
-			border: 3px solid white !important;
-			border-radius: 0;
-			line-height: 1.5;
+		a {
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			color: $green;
+			margin-right: 4%;
+			
+			&:last-of-type {
+				margin-right: 0;
+			}
 			
 			&:hover {
 				color: white;
-				background-color: $green !important;
-				border-color: $green !important;
-			}
-		}
-		
-		
-		
-		//Bio Content
-		//===================
-		.teammember-bio-content {
-			color: white;
-			
-			img {
-				max-width: 365px;
 				
-				//600px
-			    @include respond-max($l-phone) {
-					width: 100%;
+				.x-icon {
+					background-color: $green;
 				}
 			}
 			
-			.teammember-name,
-			.teammember-title {
-				color: white;	
-			}
 			
-			
-			.teammember-name {
-				font-family: $font-title;
-				font-size: 32px;
-				line-height: 1.2;
-				letter-spacing: 1px;
-				color: $green;
-			}
-			
-			.teammember-title {
-				font-family: $font-main;
-				font-size: 20px;
-				line-height: 1.2;
-				font-style: oblique;
+			//Icon
+			//================
+			.x-icon {
+				font-size: 24px;
+				width: 45px;
+				height: 45px;
+				border: 3px solid $green;
+				
+				&:before {
+					vertical-align: bottom;
+				}
 			}
 		}
 	}
